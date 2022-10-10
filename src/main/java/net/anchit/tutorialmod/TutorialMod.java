@@ -21,7 +21,7 @@ public class TutorialMod {
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus)
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
