@@ -1,4 +1,6 @@
 {
   "item.tutorialmod.midnight_emerald": "Midnight Emerald",
-  "item.tutorialmod.midnight_essence": "Midnight Essence"
+  "item.tutorialmod.midnight_essence": "Midnight Essence",
+
+  "itemGroup.CUSTOM_TAB": "custom_items"
 }

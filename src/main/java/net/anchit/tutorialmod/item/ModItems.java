@@ -13,9 +13,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Item> MIDNIGHT_EMERALD = ITEMS.register("midnight_emerald",
-            ()->new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            ()->new Item(new Item.Properties().tab((ModCreativeModeTab.CUSTOM_TAB))));
     public static final RegistryObject<Item> MIDNIGHT_ESSENCE = ITEMS.register("midnight_essence",
-            ()->new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            ()->new Item(new Item.Properties().tab((ModCreativeModeTab.CUSTOM_TAB))));
 
 
     public static void register(IEventBus eventBus){
