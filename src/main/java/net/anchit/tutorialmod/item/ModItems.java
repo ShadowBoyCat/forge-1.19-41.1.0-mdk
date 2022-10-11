@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> MIDNIGHT_EMERALD = ITEMS.register("midnight_emerald",
             ()->new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> MIDNIGHT_ESSENCE = ITEMS.register("midnight_essence",
+            ()->new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 
     public static void register(IEventBus eventBus){
