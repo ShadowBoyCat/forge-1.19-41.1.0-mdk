@@ -2,5 +2,9 @@
   "item.tutorialmod.midnight_emerald": "Midnight Emerald",
   "item.tutorialmod.midnight_essence": "Midnight Essence",
 
+  "block.tutorialmod.midnight_block": "Block of Midnight",
+  "block.tutorialmod.midnight_ore": "Midnight Ore",
+  "block.tutorialmod.deepslate_midnight_ore": "Deepslate Midnight Ore",
+
   "itemGroup.CUSTOM_TAB": "custom_items"
 }
