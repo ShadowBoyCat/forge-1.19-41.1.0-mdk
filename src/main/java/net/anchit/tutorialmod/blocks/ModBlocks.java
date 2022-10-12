@@ -1,6 +1,7 @@
 package net.anchit.tutorialmod.blocks;
 
 import net.anchit.tutorialmod.TutorialMod;
+import net.anchit.tutorialmod.blocks.custom.JumpSpeedBlock;
 import net.anchit.tutorialmod.item.ModCreativeModeTab;
 import net.anchit.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -33,6 +34,11 @@ public class ModBlocks {
                     UniformInt.of(3, 7)), ModCreativeModeTab.CUSTOM_TAB);
     public static final RegistryObject<Block> DEEPSLATE_MIDNIGHT_ORE = registerBlock("deepslate_midnight_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3,7)), ModCreativeModeTab.CUSTOM_TAB);
+
+    public static final RegistryObject<Block> JUMPYSPEED_BLOCK = registerBlock("jumpy_speed_block",
+            () -> new JumpSpeedBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,7)), ModCreativeModeTab.CUSTOM_TAB);
 

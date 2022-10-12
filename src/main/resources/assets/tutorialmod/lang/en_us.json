@@ -1,10 +1,12 @@
 {
   "item.tutorialmod.midnight_emerald": "Midnight Emerald",
   "item.tutorialmod.midnight_essence": "Midnight Essence",
+  "item.tutorialmod.eight_ball": "Eight Ball",
 
   "block.tutorialmod.midnight_block": "Block of Midnight",
   "block.tutorialmod.midnight_ore": "Midnight Ore",
   "block.tutorialmod.deepslate_midnight_ore": "Deepslate Midnight Ore",
+  "block.tutorialmod.jumpy_speed_block": "Jumpy Speed Block",
 
-  "itemGroup.CUSTOM_TAB": "custom_items"
+  "itemGroup.customitems": "Midnight Items"
 }
