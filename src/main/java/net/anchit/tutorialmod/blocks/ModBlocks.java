@@ -42,11 +42,16 @@ public class ModBlocks {
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3,7)), ModCreativeModeTab.CUSTOM_TAB);
 
-            private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
-                RegistryObject<T> toReturn = BLOCKS.register(name, block);
-                registerBlockItem(name, toReturn, tab);
-                return toReturn;
-            }
+    public static final RegistryObject<Block> GAZE_LANTERN = registerBlock("gaze_lantern",
+            () -> new JumpSpeedBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3,7)), ModCreativeModeTab.CUSTOM_TAB);
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
 
             private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                                     CreativeModeTab tab){

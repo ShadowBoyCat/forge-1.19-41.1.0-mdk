@@ -23,7 +23,9 @@ public class JumpSpeedBlock extends Block {
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player,
                                  InteractionHand hand, BlockHitResult result) {
-        player.sendSystemMessage(Component.literal("Right Clicked Dis"));
+        if(!level.isClientSide() && hand == hand.MAIN_HAND){
+            player.sendSystemMessage(Component.literal("Right Clicked Dis"));
+        }
 
         return super.use(state, level, pos, player, hand, result);
     }
