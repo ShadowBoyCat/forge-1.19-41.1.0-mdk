@@ -1,16 +1,20 @@
 package net.anchit.tutorialmod.blocks;
 
 import net.anchit.tutorialmod.TutorialMod;
+import net.anchit.tutorialmod.blocks.custom.GazeLantern;
 import net.anchit.tutorialmod.blocks.custom.JumpSpeedBlock;
 import net.anchit.tutorialmod.item.ModCreativeModeTab;
 import net.anchit.tutorialmod.item.ModItems;
+import net.anchit.tutorialmod.item.custom.BlueberryCropBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -43,9 +47,12 @@ public class ModBlocks {
                     UniformInt.of(3,7)), ModCreativeModeTab.CUSTOM_TAB);
 
     public static final RegistryObject<Block> GAZE_LANTERN = registerBlock("gaze_lantern",
-            () -> new JumpSpeedBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3,7)), ModCreativeModeTab.CUSTOM_TAB);
+            () -> new GazeLantern(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(GazeLantern.LIT) ? 15 : 0)), ModCreativeModeTab.CUSTOM_TAB);
+
+    public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
